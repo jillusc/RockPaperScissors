@@ -12,16 +12,22 @@ body {
     font-family: "Sigmar", sans-serif;
     color: #410387;
     text-align: center;
-    flex: 1 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+align-items: center;
+margin: 10px auto;
 }
 
 .heading {
-
     text-align: center;
 }
 
 h1 {
     font-size: 4em;
+    margin-left: 20px;
 }
 
 .game-area {
@@ -34,7 +40,6 @@ h1 {
 }
 
 .btn-play {
-    margin;
     background-color: #ccc;
     padding: 5px;
     border: 2px solid #fff;
