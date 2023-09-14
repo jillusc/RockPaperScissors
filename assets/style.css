@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,20 +21,36 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .game-area {
     background-color: #7bf9d7;
+            border: 2px solid #fff;
     width: 70%;
+    height: 50vh;
     margin: auto;
-    border-radius: 50%; 
+    border-radius: 30px;
+}
+
+.btn-play {
+    margin;
+    background-color: #ccc;
+    padding: 5px;
+    border: 2px solid #fff;
+    width: fit-content;
+    font-family: "Sigmar", sans-serif;
+    color: #410387;
+    font-size: 1.5rem;
 }
 
 .score-area {
     background-color: #410387;
+        border: 2px solid #fff;
     width: 70%;
+    height: 10vh;
     margin: auto;
+    border-radius: 50px;
 }
 
 footer {
@@ -41,7 +58,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #410387;
-    color: #ccc;
+    color: #fff;
     font-size: .75rem;
     padding: 10px;
 }
