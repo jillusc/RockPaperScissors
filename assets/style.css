@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 body {
 
     background-color: #ccc;
+    font-family: "Sigmar", sans-serif;
     color: #410387;
     text-align: center;
     flex: 1 0 auto;
@@ -15,6 +17,10 @@ body {
 .heading {
 
     text-align: center;
+}
+
+h1 {
+    font-size: 3em;
 }
 
 .game-area {
@@ -28,4 +34,14 @@ body {
     background-color: #410387;
     width: 70%;
     margin: auto;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #410387;
+    color: #ccc;
+    font-size: .75rem;
+    padding: 10px;
 }
