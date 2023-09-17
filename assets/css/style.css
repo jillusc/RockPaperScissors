@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: #ccc;
+    font-family: "Sigmar", sans-serif;
+    color: #410387;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 2% 0 2% 10%;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-left: 3%;
+}
+
+.RPS-logo {
+    width: 15%;
+    margin-right: 2%;
+}
+
+hr {
+    border: 1px solid #fff;
+    margin: 0;
+    top: 5%;
+    left: 50%;
+    height: 90%;
+    position: absolute;
+
+}
+
+#main-outer-div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+}
+
+#game-area {
+    position: relative;
+    background-color: #7bf9d7;
+    border: 2px solid #fff;
+    width: 70%;
+    height: 55vh;
+    margin: auto;
+    border-radius: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#play-area {
+    background-color: #7bf9d7;
+    width: 99%;
+    height: 98%;
+    border-radius: 30px;
+    margin: auto;
+    display: flex;
+}
+
+#player-go {
+    height: 100%;
+    width: 49%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#player-go p,
+#computer-go p {
+    font-size: 1.25rem;
+}
+
+#player-buttons {
+    width: 10%;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.btn-choices {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background: none;
+}
+
+.btn-choices img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+#computer-go {
+    height: 100%;
+    width: 49%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#score-area {
+    background-color: #410387;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 70%;
+    margin: 1% 0 0 18%;
+    padding: 1%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+footer {
+    bottom: 0;
+    margin-top: 15%;
+    background-color: #410387;
+    color: #ccc;
+    font-size: .5rem;
+    padding: 10px;
+}

@@ -4,30 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="jillusc" />
-    <link rel="stylesheet" href="assets/style.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
     <link rel="icon" type="image/png" href="assets/images/RPS-favicon.png" />
     <title>ROCKPAPERSCISSORS!</title>
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.webp" alt="logo" />
+      <img src="assets/images/logo.webp" class="RPS-logo" alt="logo" />
       <h1>ROCKPAPERSCISSORS!</h1>
     </header>
+    <main>
+      <div id="main-outer-div">
+        <div id="player-buttons">
+            <button data-type="rock" class="btn-choices">
+                <img src="assets/images/btn-rock.webp" alt="rock" />
+            </button>
+            <button data-type="paper" class="btn-choices">
+                <img src="assets/images/btn-paper.webp" alt="paper" />
+            </button>
+            <button data-type="scissors" class="btn-choices">
+                <img src="assets/images/btn-scissors.webp" alt="scissors" />
+            </button>
+        </div>
+      
+        <div id="game-area">
+          <div id="play-area">
+            <div id="player-go"><p>Player:</p>
+              <div id="player-choice-img-container">
+              </div>
+            </div>
 
-    <div class="game-area">
-      <div class="play-area">
-        <div id="player-go">img</div>
-        <div><hr /></div>
-        <div id="computer-go">img</div>
+            <div><hr /></div>
+
+            <div id="computer-go"><p>Computer:</p>
+            </div>
+            <div id="computer-choice-img-container">
+            </div>
+        </div>
       </div>
-      <button data-type="play" class="btn-play">PLAY!</button>
-    </div>
+      </div>
 
-    <div class="score-area">
-      <p class="scores">Player wins <span id="score">0</span></p>
-      <p class="scores">Computer wins <span id="incorrect">0</span></p>
-    </div>
 
+    <div id="score-area">
+      <p class="scores">WINS: <span id="scores">0</span></p>
+      <p class="losses">WINS: <span id="losses">0</span></p>
+    </div>
+</main>
     <footer>
       <div>
         <p class="copyright">copyright <span>&copy;</span> jillusc 2023</p>
