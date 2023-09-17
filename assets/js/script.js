@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-/* Event listeners for R, P, S buttons*/
+/* Insert event listeners for R, P, S buttons*/
 
 
 /* The main game function - called both when the script is first loaded and after the winner has been ascertained */
