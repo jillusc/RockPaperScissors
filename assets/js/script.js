@@ -18,6 +18,10 @@ function runGame() {
 
 /* Get the player's choice of R, P or S */
 function getPlayerChoice() {
+    for (const button of buttons) {
+        button.addEventListener('click');
+    }
+document.queryselector('btn-choices').
 }
 
 /* Generate a random choice of R, P or S for the computer */
