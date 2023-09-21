@@ -18,8 +18,7 @@ const maxScore = 5;
 const winner = ascertainWinner();
 document.getElementById('scores').textContent = playerScore;
 document.getElementById('losses').textContent = computerScore;
-document.getElementById('player-choice-img').style.display = 'none';
-document.getElementById('computer-choice-img').style.display = 'none';
+
 
 /* The main game function - called both when the script is first loaded and after the restart alert */
 function runGame() {
@@ -78,29 +77,9 @@ function ascertainWinner(playerChoice, computerChoice) {
 }
 
 /* Increment player wins (scores) and computer wins (losses) and display them */
-function incrementScores(winner) {
-    if (winner === "player") {
-        playerScore++;
-    } else if (winner === "computer") {
-        computerScore++;
-    }
-    document.getElementById('scores').textContent = playerScore;
-    document.getElementById('losses').textContent = computerScore;
+function incrementScores() {
 }
 
 /* Game end/after 5 rounds add restart alert? */
 function gameEnd() {
-    let winnerText;
-    if (playerScore === maxScore) {
-        winnerText = "You won! Hurrah!";
-    } else {
-        winnerText = "Sorry! The computer won!";
-    }
-
-    alert(winnerText);
-
-    const playAgain = confirm("Do you want to play again?");
-    if (playAgain) {
-        runGame();
-    }
 }
