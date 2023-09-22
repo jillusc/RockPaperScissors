@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 
+/* general styles */
 * {
     margin: 0;
     padding: 0;
@@ -24,33 +25,34 @@ h1 {
     margin-left: 3%;
 }
 
-.RPS-logo {
-    width: 15%;
-    margin-right: 2%;
-}
-
 hr {
     border: 1px solid #fff;
     margin: 0;
     top: 5%;
     left: 50%;
-    height: 90%;
+    height: 85%;
     position: absolute;
 
 }
 
+.RPS-logo {
+    width: 15%;
+    margin-right: 2%;
+}
+
 #main-outer-div {
     width: 90%;
-    margin: auto;
+    margin-left: 3%;
     display: flex;
 }
 
+/* the main gaming area styles */
 #game-area {
     position: relative;
     background-color: #7bf9d7;
     border: 2px solid #fff;
     width: 70%;
-    height: 55vh;
+    min-height: 60vh;
     margin: auto;
     border-radius: 30px;
     flex: 1;
@@ -61,47 +63,26 @@ hr {
 
 #play-area {
     background-color: #7bf9d7;
-    width: 99%;
-    height: 98%;
+    width: 100%;
     border-radius: 30px;
-    margin: auto;
     display: flex;
 }
 
-#player-go {
-    height: 100%;
+#player-go,
+#computer-go {
     width: 49%;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
+}
+
+#player-go {
     justify-content: space-between;
 }
 
 #player-go p,
 #computer-go p {
     font-size: 1.25rem;
-}
-
-#player-buttons {
-    width: 10%;
-    margin-right: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.btn-choices {
-    box-sizing: border-box;
-    width: 40px;
-    height: 40px;
-    background: none;
-}
-
-.btn-choices img {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    object-fit: cover;
 }
 
 #player-choice-img-container,
@@ -114,34 +95,53 @@ hr {
     justify-content: center;
 }
 
-#computer-go {
-    height: 100%;
-    width: 49%;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
 #player-choice-img,
 #computer-choice-img {
     width: 60%;
 }
 
+/* buttons */
+#player-buttons {
+    width: 10%;
+    margin: 2% 2% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-choices {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    background: none;
+}
+
+.btn-choices img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* the scores area styles */
 #score-area {
     background-color: #410387;
     border: 2px solid #fff;
     color: #fff;
     width: 70%;
-    margin: 1% 0 0 18%;
+    margin: 2% 0 0 17%;
     padding: 1%;
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    gap: 30%;
+    gap: 32%;
 }
 
+/* footer */
 footer {
     bottom: 0;
+    width: 100%;
     margin-top: 15%;
     background-color: #410387;
     color: #ccc;

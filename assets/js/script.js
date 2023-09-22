@@ -3,7 +3,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("btn-choices");
     for (let button of buttons) {
-        button.addEventListener("click", getPlayerChoice);
+        button.addEventListener("click", function (event) {
+            getPlayerChoice(event);
+        });
     }
     runGame();
 });
@@ -23,7 +25,7 @@ document.getElementById('losses').textContent = computerScore;
 /* The main game function - called both when the script is first loaded and after the restart alert */
 function runGame() {
     getPlayerChoice();
-    getComputerChoice();
+    const computerChoice = getComputerChoice();
     const winner = ascertainWinner(playerChoice, computerChoice);
     incrementScores(winner);
     if (playerScore === maxScore || computerScore === maxScore) {
@@ -44,9 +46,6 @@ function getPlayerChoice(event) {
         playerChoiceImg.src = 'assets/images/scissors.webp';
     }
     playerChoiceImg.style.display = 'block';
-    const computerChoice = getComputerChoice();
-    const winner = ascertainWinner(playerChoice, computerChoice);
-    updateScores(winner);
 }
 
 /* Generate a random choice of R, P or S for the computer */
@@ -77,9 +76,29 @@ function ascertainWinner(playerChoice, computerChoice) {
 }
 
 /* Increment player wins (scores) and computer wins (losses) and display them */
-function incrementScores() {
+function incrementScores(winner) {
+    if (winner === "player") {
+        playerScore++;
+    } else if (winner === "computer") {
+        computerScore++;
+    }
+    document.getElementById('scores').textContent = playerScore;
+    document.getElementById('losses').textContent = computerScore;
 }
 
 /* Game end/after 5 rounds add restart alert? */
 function gameEnd() {
+    let winnerText;
+    if (playerScore === maxScore) {
+        winnerText = "You won! Hurrah!";
+    } else {
+        winnerText = "Sorry! The computer won!";
+    }
+
+    alert(winnerText);
+
+    const playAgain = confirm("Play again?");
+    if (playAgain) {
+        runGame();
+    }
 }
