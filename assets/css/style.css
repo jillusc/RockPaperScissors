@@ -148,3 +148,37 @@ footer {
     font-size: .5rem;
     padding: 10px;
 }
+
+.copyright {
+    font-size: 10px;
+}
+
+/* media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 2.25rem;
+        margin-left: 3%;
+    }
+
+    #player-buttons {
+        gap: 15px;
+    }
+
+    .btn-choices {
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        background: none;
+    }
+}
+
+/* media query: laptops and larger screens (992px and up) */
+@media screen and (min-width: 992px) {
+    #player-buttons {
+        margin: 2% 0 0 0;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
