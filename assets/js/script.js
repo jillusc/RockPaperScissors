@@ -7,14 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
             getPlayerChoice(event);
         });
     }
+    runGame();
 });
 
 /* Variables */
 const choices = ["rock", "paper", "scissors"];
-let playerChoice = document.getElementById('player-choice-img');
-let computerChoice = document.getElementById('computer-choice-img');
+let playerChoice;
+let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
+let winner;
 const maxScore = 5;
 document.getElementById('scores').textContent = playerScore;
 document.getElementById('losses').textContent = computerScore;
@@ -22,7 +24,7 @@ document.getElementById('losses').textContent = computerScore;
 
 /* The main game function - called both when the script is first loaded and after the restart alert */
 function runGame() {
-    ascertainWinner();
+    winner = ascertainWinner();
     incrementScores(winner);
     if (playerScore === maxScore || computerScore === maxScore) {
         gameEnd();
@@ -31,9 +33,9 @@ function runGame() {
 
 /* Get the player's choice of R, P or S */
 function getPlayerChoice(event) {
-    playerChoiceTarget = event.target;
-    playerChoice = playerChoiceTarget.getAttribute('data-type');
-    playerChoiceImg = document.getElementById('player-choice-img');
+    let playerChoiceTarget = event.target;
+    let playerChoice = playerChoiceTarget.getAttribute('data-type');
+    let playerChoiceImg = document.getElementById('player-choice-img');
 
     if (playerChoice === 'rock') {
         playerChoiceImg.src = 'assets/images/rock.webp';
@@ -52,9 +54,9 @@ function getPlayerChoice(event) {
 
 /* Generate a random choice of R, P or S for the computer */
 function getComputerChoice() {
-    randomIndex = Math.floor(Math.random() * 3);
-    computerChoice = choices[randomIndex];
-    computerChoiceImg = document.getElementById('computer-choice-img');
+    let randomIndex = Math.floor(Math.random() * 3);
+    let computerChoice = choices[randomIndex];
+    let computerChoiceImg = document.getElementById('computer-choice-img');
 
     if (computerChoice === 'rock') {
         computerChoiceImg.src = 'assets/images/rock.webp';
@@ -117,7 +119,7 @@ function gameEnd() {
         computerScore = 0;
         document.getElementById('scores').textContent = playerScore;
         document.getElementById('losses').textContent = computerScore;
-        computerChoiceImg.src = 'assets/images/blank.webp';
-        playerChoiceImg.src = 'assets/images/blank.webp';
+        computerChoice.src = 'assets/images/blank.webp';
+        playerChoice.src = 'assets/images/blank.webp';
     }
 }
