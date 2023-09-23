@@ -23,6 +23,12 @@ header {
 h1 {
     font-size: 1.75rem;
     margin-left: 3%;
+    margin-right: 30%;
+    flex-grow: 1;
+}
+
+p {
+    font-size: .75rem;
 }
 
 hr {
@@ -44,6 +50,8 @@ hr {
     width: 90%;
     margin-left: 3%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* the main gaming area styles */
@@ -52,7 +60,8 @@ hr {
     background-color: #7bf9d7;
     border: 2px solid #fff;
     width: 70%;
-    min-height: 60vh;
+    height: 100%;
+    min-height: 30vh;
     margin: auto;
     border-radius: 30px;
     flex: 1;
@@ -66,11 +75,13 @@ hr {
     width: 100%;
     border-radius: 30px;
     display: flex;
+    flex-grow: 1;
 }
 
 #player-go,
 #computer-go {
     width: 49%;
+    padding: 2% 1% 1%;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -97,16 +108,18 @@ hr {
 
 #player-choice-img,
 #computer-choice-img {
-    width: 60%;
+    width: 90%;
 }
 
 /* buttons */
 #player-buttons {
     width: 10%;
-    margin: 2% 2% 0 0;
+    height: 90%;
+    margin: 3% 2% 2% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 8px;
 }
 
@@ -135,7 +148,7 @@ hr {
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    gap: 32%;
+    gap: 35%;
 }
 
 /* footer */
@@ -160,10 +173,6 @@ footer {
         margin-left: 3%;
     }
 
-    #player-buttons {
-        gap: 15px;
-    }
-
     .btn-choices {
         box-sizing: border-box;
         width: 60px;
@@ -178,7 +187,22 @@ footer {
         margin: 2% 0 0 0;
     }
 
+    p {
+        font-size: 1rem;
+    }
+
     .copyright {
         font-size: 12px;
+    }
+}
+
+/* media query: largest screens (1280px and up) */
+@media screen and (min-width: 1280px) {
+    .RPS-logo {
+        margin-left: 10%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
     }
 }
