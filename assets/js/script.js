@@ -45,15 +45,16 @@ function getPlayerChoice(event) {
     playerChoiceImg.style.display = 'block';
     getComputerChoice();
     let winner = ascertainWinner();
-    if (winner != false){ 
-    incrementScores(winner);}
+    if (winner != false) {
+        incrementScores(winner);
+    }
 }
 
 /* Generate a random choice of R, P or S for the computer */
 function getComputerChoice() {
-    randomIndex = Math.floor(Math.random() * 3);                        
-    computerChoice = choices[randomIndex];                              
-    computerChoiceImg = document.getElementById('computer-choice-img'); 
+    randomIndex = Math.floor(Math.random() * 3);
+    computerChoice = choices[randomIndex];
+    computerChoiceImg = document.getElementById('computer-choice-img');
 
     if (computerChoice === 'rock') {
         computerChoiceImg.src = 'assets/images/rock.webp';
@@ -67,7 +68,7 @@ function getComputerChoice() {
 
 /* Determine whether player or computer choice wins */
 function ascertainWinner() {
-    if (playerChoice === computerChoice) {return false;}
+    if (playerChoice === computerChoice) { return false; }
     if ((playerChoice === "rock" && computerChoice === "scissors") ||
         (playerChoice === "paper" && computerChoice === "rock") ||
         (playerChoice === "scissors" && computerChoice === "paper")) {
@@ -87,15 +88,15 @@ function incrementScores(winner) {
     document.getElementById('scores').textContent = playerScore;
     document.getElementById('losses').textContent = computerScore;
     if (isWinnerDefined() === true) {
-    gameEnd();
-}
-}
-    function isWinnerDefined () {
-        if (playerScore === maxScore || computerScore === maxScore) return true;
-        return false;
+        gameEnd();
     }
+}
+function isWinnerDefined() {
+    if (playerScore === maxScore || computerScore === maxScore) return true;
+    return false;
+}
 
-/* Game end/after 5 rounds add restart alert */
+/* Game end = after 5 rounds add restart alert */
 function gameEnd() {
     let winnerText;
     if (playerScore === maxScore) {
@@ -103,7 +104,9 @@ function gameEnd() {
     } else {
         winnerText = "Sorry! The computer won!";
     }
+
     alert(winnerText);
+
     let playAgain = confirm("Play again?");
     if (playAgain) {
         cleanUp();
