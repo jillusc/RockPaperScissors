@@ -2,10 +2,10 @@
 
 This page displays a classic game that is usually played by people using gestures with their hands. Rock, Paper, Scissors is typically used as a way to determine possession of some kind and the decision-making aspect is presented via an easy and very fair concept of play. This page enables users to play against an "unseen opponent" as the computer generates a random response to the player's choice. The game operates on a "first-to-score-5" basis.
 
-The page can be viewed here
+The page can be viewed here <a href="https://jillusc.github.io/RockPaperScissors">ROCKPAPERSCISSORS!</a>
 
 
-## Function
+## Functionality
 
 Players select an item from rock, paper and scissors by clicking a corresponding button.
 In the gaming area, the two halves are reserved for the player's and the computer's choices; they have image-container div's which by default are displaying "blank" placeholder images.
@@ -43,8 +43,14 @@ When either opponent's score reaches 5, the game ends with an alert that the use
 * JSHint was used to check the JavaScript
 * the page's html and css passed validated tests using W3C online tools
 * troubleshooting was aided by ChatGPT
-* it was viewed in Chrome, Firefox
+* it was viewed in Chrome, Firefox, Edge, Safari and Samsung Internet browsers
 * using Lighthouse, the page's accessibility scored 100
+
+
+## Known bugs
+
+* the game presented an error in Safari whereby when the player reached the max score of 5, the game did not end at this point
+
 
 
 ## Deployment
@@ -55,7 +61,8 @@ The site is deployed to Github by the following process:
 * select Pages in the pane on the left
 * source is set to 'Deploy from a branch' and the main branch is selected with the folder set to / (root)
 * click Save
-The website can be viewed here
+
+The webpage can be viewed here <https://jillusc.github.io/RockPaperScissors/>
 
 
 ## Credits

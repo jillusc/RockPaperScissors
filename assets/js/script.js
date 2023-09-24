@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* Variables */
 const choices = ["rock", "paper", "scissors"];
-const maxScore = 6;
+const maxScore = 5;
 let playerScore = 0;
 let computerScore = 0;
 const playerChoiceImg = document.getElementById('player-choice-img');
