@@ -96,7 +96,7 @@ function gameEnd(_playerChoice, _computerChoice) {
         playerChoiceImg.src = 'assets/images/blank.webp';
         computerChoiceImg.src = 'assets/images/blank.webp';
 
-        location.reload(); // I found this method of refreshing the page
+        location.reload(); // this method of refreshing the page was found
                            // at https://www.w3schools.com/jsref/met_loc_reload.asp
     }
 }
