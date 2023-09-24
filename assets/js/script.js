@@ -54,7 +54,7 @@ function ascertainWinner(playerChoice, computerChoice) {
     ) {
         return "player";
     } else if (playerChoice === computerChoice) {
-        return;
+        return "tie";
     } else {
         return "computer";
     }
