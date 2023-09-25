@@ -1,6 +1,6 @@
 # ROCKPAPERSCISSORS!
 
-This page hosts a classic game that is normally played by people using gestures with their hands. Rock, Paper, Scissors is typically used as a way to determine possession of some kind and the decision-making aspect is presented via an easy and very fair concept of play. ROCKPAPERSCISSORS! enables users to play against an "unseen opponent" as the computer generates a random response to the player's choice. It is a fun and chance-based game; it makes no demands, requiring simply the user's interaction. And, designed for mobiles, it can be enjoyed in any situation on the go!
+This page hosts a classic game that is normally played by people using gestures with their hands. Rock, Paper, Scissors is typically used as a way to determine possession of some kind and the decision-making aspect is presented via an easy and very fair concept of play. ROCKPAPERSCISSORS! enables users to play against an "unseen opponent" as the computer generates a random response to the player's choice. It is a fun and chance-based game; it makes no demands, requiring simply the user's interaction. And, due to its simplicity of design suited for smaller screens, it can be enjoyed in any situation on the go!
 
 <img src="https://github.com/jillusc/RockPaperScissors/blob/main/assets/images/readme%20images/main%20page%20screenshot 576px.png">
 
@@ -55,7 +55,7 @@ It operates on a "first-to-score-5" basis: when either opponent's score reaches 
 
 ## Features to implement
 
-* a method by which the page loads on mobiles ONLY in landscape orientation might be beneficial as the game relies on a width aspect; alternatively, to reshape the playing area (and split the heading into 3 separate words) so that it can function in a vertical format
+* a method by which the page loads on mobiles ONLY in landscape orientation might be beneficial as the game relies on a width aspect; alternatively, to reshape the playing area (and split the heading into 3 separate words) so that it can also function in a vertical format
 
 * an option to view the rules might be useful in the case of users not being already familiar
 
@@ -64,25 +64,19 @@ It operates on a "first-to-score-5" basis: when either opponent's score reaches 
 
 ## Testing
 
-* the page was inspected using Chrome's devtools
-
-* JSHint was used to check the JavaScript
-
-* the page's html and css passed validation tests using W3C online tools:
+The page was inspected using Chrome's devtools and the game was viewed in Chrome, Firefox, Edge, Safari and Samsung Internet browsers. It runs as expected whereby the buttons' event listeners detect the click events, triggering the displaying of the corresponding images, followed by the random generation method to get the computer's choice of rock, paper or scissors; the scores increase accordingly and after 5 wins an alert appears announcing the winner, with the option of playing again. Here, clicking "OK" refreshes the page.<BR>
+Safari was seen to handle the scoríng/winning aspect differently as detailed in 'Known bugs' below.<BR>
+In mobile phone views, the layout display was seen to be ineffective in portrait orientation due to the header requiring more width space (ROCKPAPERSCISSORS!) [see 'Features to implement' above]<BR><BR>
+JSHint was used to check the JavaScript and the page's html and css passed validation tests using W3C online tools:
 <img src="https://github.com/jillusc/RockPaperScissors/blob/main/assets/images/readme%20images/html%20validator%20pass.png">
-<img src="https://github.com/jillusc/RockPaperScissors/blob/main/assets/images/readme%20images/css%20validator%20pass.png">
-
-* using Lighthouse, the page's accessibility scored 100:
+<img src="https://github.com/jillusc/RockPaperScissors/blob/main/assets/images/readme%20images/css%20validator%20pass.png"><BR>
+Using Lighthouse, the page's accessibility scored 100:
 <img src="https://github.com/jillusc/RockPaperScissors/blob/main/lighthouse%20pass.png">
-
-* troubleshooting was aided by ChatGPT
-
-* the page was viewed in Chrome, Firefox, Edge, Safari and Samsung Internet browsers
 
 
 ## Known bugs
 
-* in the JavaScript, the maxScore is set at 5: in reality, the scores never display 5 because the game ends based on the number of wins counted. To counter this, the maxScore was set to 6. This did not resolve the issue because in Safari it works differently, and meant that the game continued after a score of 5 had displayed (and ended after 6 wins were counted). The maxScore was then reset to 5. So to add a fix whereby the game ends not until <em>after a score of 5 is displayed </em>would be ideal
+In the JavaScript, the maxScore is set at 5: in reality, the scores never display 5 because the game ends based on the number of wins counted. To counter this, the maxScore was set to 6. This did not resolve the issue because in Safari it works differently, and meant that the game continued after a score of 5 had displayed (and ended after 6 wins were counted). The maxScore was then reset to 5. So to add a fix whereby the game ends not until <em>after a score of 5 is displayed </em>would be ideal.
 
 
 ## Deployment
@@ -94,17 +88,18 @@ The site is deployed to Github by the following process:
 * source is set to 'Deploy from a branch' and the main branch is selected with the folder set to / (root)
 * click Save
 
-
 The live link can be found here: <a href="https://jillusc.github.io/RockPaperScissors">ROCKPAPERSCISSORS!</a>
 
 
 ## Credits
 
-Code credits:<BR>
+Content:<BR>
 The site <https://www.w3schools.com/> was used as an additional resource. The method of refreshing the page was found here and is used as the last instruction after the game ends.<BR>
 All other JavaScript code was inspired by teaching materials provided by CodeInstitute before being modified.
+Troubleshooting was aided by ChatGPT.
 
-Image credits:<BR>
+
+Media:<BR>
 The three images used in the site were found on free images websites as detailed below:
 
 * rock - <https://clipart-library.com/clip-art/rock-clipart-transparent-20.htm>
